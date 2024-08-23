@@ -1,0 +1,22 @@
+.label {
+  &__container {
+    padding: 0.8rem 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  &--danger {
+    color: var(--danger);
+    background-color: var(--danger-light);
+  }
+  &--info {
+    color: var(--info);
+    background-color: var(--info-light);
+  }
+  &--primary {
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+  }
+}

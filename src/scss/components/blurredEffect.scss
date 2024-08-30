@@ -1,0 +1,16 @@
+.blurred-ball {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+
+  &--green {
+    @extend .blurred-ball;
+    background-color: var(--green-blur);
+  }
+  &--blue {
+    @extend .blurred-ball;
+    background-color: var(--blue-blur);
+  }
+}

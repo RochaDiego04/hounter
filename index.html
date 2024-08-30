@@ -13,7 +13,48 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <h1>hello</h1>
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar__container container">
+          <input type="checkbox" name="hamburguer-menu" id="hamburguer-menu" />
+          <label for="hamburguer-menu" class="hamburger__lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </label>
+          <ul class="menu__items">
+            <li style="background-color: black">
+              <a class="button button--white label label--bold" href="#">
+                About Us
+              </a>
+            </li>
+            <li style="background-color: black">
+              <a class="button button--white label label--bold" href="#">
+                Article
+              </a>
+            </li>
+            <li style="background-color: black">
+              <a class="button button--white label label--bold" href="#">
+                Property
+              </a>
+            </li>
+            <li style="background-color: black">
+              <a class="button button--white label label--bold" href="#">
+                Sign Up
+              </a>
+            </li>
+          </ul>
+          <svg class="logo" width="117" height="36">
+            <use href="/images/svg/logo.svg#logo"></use>
+          </svg>
+        </div>
+      </nav>
+      <!-- stuffed element when header is fixed so page dont move up -->
+      <div class="pollyfill"></div>
+    </header>
+
+    <div class="left-side">hola</div>
+
     <script defer src="src/js/main.js"></script>
   </head>
   <body></body>

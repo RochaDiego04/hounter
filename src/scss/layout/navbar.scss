@@ -7,7 +7,7 @@ $menu-item-gap: 1.5rem;
 $hamburger-size: 3rem;
 $hamburger-line-height: 3px;
 $hamburger-line-color: var(--black);
-$menu-bg: rgba(255, 255, 255, 0.5);
+$menu-bg: rgba(255, 255, 255, 0.9);
 $menu-width: 300px;
 $menu-shadow: 0.5rem 0px 2rem 1rem #e2e2e296;
 
@@ -32,6 +32,7 @@ $menu-shadow: 0.5rem 0px 2rem 1rem #e2e2e296;
     .menu__items {
       order: 2;
       display: flex;
+      align-items: center;
       gap: $menu-item-gap;
 
       li {
@@ -39,8 +40,6 @@ $menu-shadow: 0.5rem 0px 2rem 1rem #e2e2e296;
       }
 
       a {
-        transition: color 0.3s ease-in-out;
-
         &:hover {
           transition: color 0.3s ease-in-out;
         }
@@ -128,6 +127,12 @@ $menu-shadow: 0.5rem 0px 2rem 1rem #e2e2e296;
         margin-bottom: 1.5rem;
         font-size: 1.3rem;
         font-weight: 500;
+
+        .button {
+          color: #000;
+          background-color: transparent;
+          border: 1px solid black !important;
+        }
       }
     }
 

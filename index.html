@@ -39,7 +39,10 @@
               </a>
             </li>
             <li>
-              <a class="button button--white label label--bold" href="#">
+              <a
+                class="button button--bordered-light label label--bold"
+                href="#"
+              >
                 Sign Up
               </a>
             </li>
@@ -49,6 +52,7 @@
           </svg>
         </div>
       </nav>
+
       <div class="header__information">
         <div class="blurred-ball--green">&nbsp;</div>
         <div class="blurred-ball--blue">&nbsp;</div>
@@ -59,9 +63,41 @@
           Everything you need about finding your place to live will be here,
           where it will be easier for you
         </p>
+
+        <div class="locationInput">
+          <svg class="locationInput__location-logo" width="24" height="24">
+            <use
+              class="locationInput__location-logo"
+              href="/images/svg/location.svg#location"
+            ></use>
+          </svg>
+          <input
+            type="text"
+            class="locationInput__input"
+            placeholder="Search for the location you want!"
+          />
+          <button type="button" class="locationInput__button button--green">
+            Search
+            <svg class="locationInput__location-logo" width="24" height="24">
+              <use
+                class="locationInput__location-logo"
+                href="/images/svg/arrow.svg#arrow"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <p class="header__information__partnershipText">Our Partnership</p>
+        <div class="header__information__partnershipsContainer">
+          <img src="/images/traveloka_logo 2.jpg" alt="partner-logo" />
+          <img src="/images/traveloka_logo 3.jpg" alt="partner-logo" />
+          <img src="/images/traveloka_logo 4.jpg" alt="partner-logo" />
+          <img src="/images/traveloka_logo 5.jpg" alt="partner-logo" />
+        </div>
       </div>
-      <div class="header__image">
-        <img src="/images/header.png" alt="" />
+
+      <div class="header__background-container">
+        <div class="header__background-container__bgImage"></div>
       </div>
     </header>
 

@@ -1,3 +1,6 @@
+$button-height-normal: 4.5rem;
+$button-height-small: 3.4rem;
+
 .button {
   color: var(--white);
 
@@ -6,24 +9,51 @@
   &:visited {
     text-transform: capitalize;
     text-decoration: none;
-    gap: 1.5rem;
     border-radius: 10rem;
 
-    // Change for the <button> element
     border: none;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+
+    // buttons with arrow icon
+    gap: 0.5rem;
   }
 
   &--white {
-    height: 3.4rem;
+    @extend .button;
+    height: $button-height-small;
     padding: 0.8px 1.6rem;
     border: 1px solid var(--white) !important;
     background-color: var(--transparent-white);
     &:hover {
       background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &--green {
+    @extend .button;
+    height: $button-height-normal;
+    padding: 1.2px 2.4rem;
+    background-color: var(--primary);
+    &-dark {
+      @extend .button--green;
+      background-color: var(--primary-dark);
+    }
+  }
+
+  &--bordered {
+    @extend .button;
+    height: $button-height-normal;
+    padding: 1.2px 2.4rem;
+    color: var(--primary-dark);
+    background-color: var(--white);
+    border: 1px solid var(--primary-dark) !important;
+
+    &-light {
+      @extend .button--bordered;
+      background-color: var(--primary-light);
     }
   }
 }

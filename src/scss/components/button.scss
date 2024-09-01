@@ -21,6 +21,9 @@ $button-height-small: 3.4rem;
     gap: 0.5rem;
   }
 
+  &--rounded {
+  }
+
   &--white {
     @extend .button;
     height: $button-height-small;
@@ -37,9 +40,26 @@ $button-height-small: 3.4rem;
     height: $button-height-normal;
     padding: 1.2px 2.4rem;
     background-color: var(--primary);
+
+    &-rounded {
+      @extend .button--green;
+      height: 4.8rem;
+      width: 4.8rem;
+      padding: 0;
+      border-radius: 50%;
+    }
+
     &-dark {
       @extend .button--green;
       background-color: var(--primary-dark);
+
+      &-rounded {
+        @extend .button--green-dark;
+        height: 4.8rem;
+        width: 4.8rem;
+        padding: 0;
+        border-radius: 50%;
+      }
     }
   }
 
@@ -51,9 +71,34 @@ $button-height-small: 3.4rem;
     background-color: var(--white);
     border: 1px solid var(--primary-dark) !important;
 
+    &-rounded {
+      @extend .button--bordered;
+      height: 4.8rem;
+      width: 4.8rem;
+      padding: 0;
+      border-radius: 50%;
+    }
+
     &-light {
       @extend .button--bordered;
       background-color: var(--primary-light);
+
+      &-rounded {
+        @extend .button--bordered-light;
+        height: 4.8rem;
+        width: 4.8rem;
+        padding: 0;
+        border-radius: 50%;
+      }
     }
+  }
+
+  &--light-green {
+    @extend .button;
+    height: $button-height-normal;
+    padding: 1.2px 2.4rem;
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+    border: none;
   }
 }

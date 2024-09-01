@@ -2,14 +2,14 @@
 
 $navbar-height: 8rem;
 $navbar-bg-color: #b99be978;
-$navbar-opacity: 0.85;
+$navbar-opacity: 0.9;
 $menu-item-gap: 1.5rem;
 $hamburger-size: 3rem;
 $hamburger-line-height: 3px;
 $hamburger-line-color: var(--black);
-$menu-bg: rgba(255, 255, 255, 0.9);
-$menu-width: 300px;
-$menu-shadow: 0.5rem 0px 2rem 1rem #e2e2e296;
+$menu-bg: var(--white);
+$menu-width: 30rem;
+$menu-shadow: 0.5rem 0px 2rem 0 #e2e2e296;
 
 .navbar {
   width: 100%;
@@ -129,9 +129,9 @@ $menu-shadow: 0.5rem 0px 2rem 1rem #e2e2e296;
         font-weight: 500;
 
         .button {
-          color: #000;
+          color: var(--black);
           background-color: transparent;
-          border: 1px solid black !important;
+          border: 1px solid var(--black) !important;
         }
       }
     }

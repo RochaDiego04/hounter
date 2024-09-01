@@ -1,0 +1,32 @@
+@use "../util/variables.scss" as v;
+
+.featured {
+  padding: 0 0 0 v.$global-padding;
+  &__label {
+    color: var(--secondary);
+  }
+  &__title {
+  }
+
+  &__flex-container {
+    padding-right: v.$global-padding;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__sections {
+    display: flex;
+    gap: 2.7rem;
+  }
+
+  &__moveArrows {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  .button--light-green {
+    color: var(--primary);
+  }
+}

@@ -37,6 +37,7 @@ h1,
 h2,
 h3,
 h4 {
+  color: var(--black);
   text-transform: capitalize;
 }
 
@@ -71,12 +72,15 @@ h4 {
   line-height: 2.4rem;
   color: var(--white);
   &--small {
+    @extend .label;
     font-size: 1.2rem;
   }
   &--medium {
+    @extend .label;
     font-weight: 500;
   }
   &--bold {
+    @extend .label;
     font-weight: 600;
   }
 }

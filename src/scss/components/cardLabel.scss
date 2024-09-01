@@ -1,0 +1,38 @@
+.cardLabel {
+  height: 3.4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 3.2rem;
+
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+
+  p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  &--icon {
+    // TODO: reduce size of svg icon
+  }
+
+  &--popular {
+    @extend .cardLabel;
+    color: var(--danger);
+    background-color: var(--danger-light);
+  }
+
+  &--new {
+    @extend .cardLabel;
+    color: var(--info);
+    background-color: var(--info-light);
+  }
+
+  &--deals {
+    @extend .cardLabel;
+    color: var(--primary-dark);
+    background-color: var(--primary-light);
+  }
+}

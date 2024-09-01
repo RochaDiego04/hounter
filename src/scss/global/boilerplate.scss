@@ -19,7 +19,7 @@ body {
   font-family: var(--font-default);
 }
 
-body p {
+p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 300;
@@ -37,6 +37,7 @@ h1,
 h2,
 h3,
 h4 {
+  color: var(--black);
   text-transform: capitalize;
 }
 
@@ -57,10 +58,11 @@ h3 {
 
 h4 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .subtitle {
+  color: var(--black);
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -71,13 +73,29 @@ h4 {
   line-height: 2.4rem;
   color: var(--white);
   &--small {
+    @extend .label;
     font-size: 1.2rem;
   }
   &--medium {
+    @extend .label;
     font-weight: 500;
   }
   &--bold {
+    @extend .label;
     font-weight: 600;
+  }
+}
+
+.section-label {
+  position: relative;
+  span.line {
+    content: "";
+    height: 2px;
+    width: 3.2rem;
+    background-color: var(--secondary);
+    position: absolute;
+    top: 30%;
+    left: -4rem;
   }
 }
 

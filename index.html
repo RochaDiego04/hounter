@@ -13,97 +13,235 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <header class="header">
-      <nav class="navbar">
-        <div class="navbar__container container">
-          <input type="checkbox" name="hamburguer-menu" id="hamburguer-menu" />
-          <label for="hamburguer-menu" class="hamburger__lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </label>
-          <ul class="menu__items">
-            <li>
-              <a class="button button--white label label--bold" href="#">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a class="button button--white label label--bold" href="#">
-                Article
-              </a>
-            </li>
-            <li>
-              <a class="button button--white label label--bold" href="#">
-                Property
-              </a>
-            </li>
-            <li>
-              <a
-                class="button button--bordered-light label label--bold"
-                href="#"
-              >
-                Sign Up
-              </a>
-            </li>
-          </ul>
-          <svg class="logo" width="117" height="36">
-            <use href="/images/svg/logo.svg#logo"></use>
-          </svg>
-        </div>
-      </nav>
-
-      <div class="header__information">
-        <div class="blurred-ball--green">&nbsp;</div>
-        <div class="blurred-ball--blue">&nbsp;</div>
-        <h1 class="header__information__title">
-          Find the place to live <span>your dreams</span> easily here
-        </h1>
-        <p>
-          Everything you need about finding your place to live will be here,
-          where it will be easier for you
-        </p>
-
-        <div class="locationInput">
-          <svg class="locationInput__location-logo" width="24" height="24">
-            <use
-              class="locationInput__location-logo"
-              href="/images/svg/location.svg#location"
-            ></use>
-          </svg>
-          <input
-            type="text"
-            class="locationInput__input"
-            placeholder="Search for the location you want!"
-          />
-          <button type="button" class="locationInput__button button--green">
-            Search
-            <svg class="locationInput__location-logo" width="24" height="24">
-              <use
-                class="locationInput__location-logo"
-                href="/images/svg/arrow.svg#arrow"
-              ></use>
-            </svg>
-          </button>
-        </div>
-
-        <p class="header__information__partnershipText">Our Partnership</p>
-        <div class="header__information__partnershipsContainer">
-          <img src="/images/traveloka_logo 2.jpg" alt="partner-logo" />
-          <img src="/images/traveloka_logo 3.jpg" alt="partner-logo" />
-          <img src="/images/traveloka_logo 4.jpg" alt="partner-logo" />
-          <img src="/images/traveloka_logo 5.jpg" alt="partner-logo" />
-        </div>
-      </div>
-
-      <div class="header__background-container">
-        <div class="header__background-container__bgImage"></div>
-      </div>
-    </header>
-
-    <div class="left-side">hola</div>
 
     <script defer src="src/js/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="body-container">
+      <header class="header">
+        <nav class="navbar">
+          <div class="navbar__container container">
+            <input
+              type="checkbox"
+              name="hamburguer-menu"
+              id="hamburguer-menu"
+            />
+            <label for="hamburguer-menu" class="hamburger__lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </label>
+            <ul class="menu__items">
+              <li>
+                <a class="button button--white label label--bold" href="#">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a class="button button--white label label--bold" href="#">
+                  Article
+                </a>
+              </li>
+              <li>
+                <a class="button button--white label label--bold" href="#">
+                  Property
+                </a>
+              </li>
+              <li>
+                <a
+                  class="button button--bordered-light label label--bold"
+                  href="#"
+                >
+                  Sign Up
+                </a>
+              </li>
+            </ul>
+            <svg class="logo" width="117" height="36">
+              <use href="/images/svg/logo.svg#logo"></use>
+            </svg>
+          </div>
+        </nav>
+
+        <div class="header__information">
+          <div class="blurred-ball--green">&nbsp;</div>
+          <div class="blurred-ball--blue">&nbsp;</div>
+          <h1 class="header__information__title">
+            Find the place to live <span>your dreams</span> easily here
+          </h1>
+          <p>
+            Everything you need about finding your place to live will be here,
+            where it will be easier for you
+          </p>
+
+          <div class="locationInput">
+            <svg class="locationInput__location-logo" width="24" height="24">
+              <use
+                class="locationInput__location-logo"
+                href="/images/svg/location.svg#location"
+              ></use>
+            </svg>
+            <input
+              type="text"
+              class="locationInput__input"
+              placeholder="Search for the location you want!"
+            />
+            <button type="button" class="locationInput__button button--green">
+              Search
+              <svg class="locationInput__location-logo" width="24" height="24">
+                <use
+                  class="locationInput__location-logo"
+                  href="/images/svg/arrow.svg#arrow"
+                ></use>
+              </svg>
+            </button>
+          </div>
+
+          <p class="header__information__partnershipText">Our Partnership</p>
+          <div class="header__information__partnershipsContainer">
+            <img src="/images/traveloka_logo 2.jpg" alt="partner-logo" />
+            <img src="/images/traveloka_logo 3.jpg" alt="partner-logo" />
+            <img src="/images/traveloka_logo 4.jpg" alt="partner-logo" />
+            <img src="/images/traveloka_logo 5.jpg" alt="partner-logo" />
+          </div>
+        </div>
+
+        <div class="header__background-container">
+          <div class="header__background-container__bgImage"></div>
+        </div>
+      </header>
+
+      <section class="featured">
+        <p class="featured__label label section-label">
+          <span class="line"></span>Our Recommendation
+        </p>
+
+        <div class="featured__flex-container">
+          <h2 class="featured__title">Featured House</h2>
+
+          <div class="featured__sections">
+            <a class="button button--light-green label--bold" href="#">
+              <svg class="" width="24" height="24">
+                <use class="" href="/images/svg/house.svg#house"></use>
+              </svg>
+              Property
+            </a>
+
+            <a class="button button--bordered label--bold" href="#">
+              <svg class="" width="24" height="24">
+                <use class="" href="/images/svg/villa.svg#villa"></use>
+              </svg>
+              Villa
+            </a>
+
+            <a class="button button--bordered label--bold" href="#">
+              <svg class="" width="24" height="24">
+                <use class="" href="/images/svg/apartment.svg#apartment"></use>
+              </svg>
+              Apartment
+            </a>
+          </div>
+
+          <div class="featured__moveArrows">
+            <a class="button--bordered-rounded label--bold" href="#">
+              <svg class="" width="24" height="24">
+                <use
+                  class=""
+                  href="/images/svg/arrow-inverse.svg#arrow-inverse"
+                ></use>
+              </svg>
+            </a>
+            <a class="button--green-rounded label--bold" href="#">
+              <svg class="" width="24" height="24">
+                <use class="" href="/images/svg/arrow.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="featured__cards">
+          <div class="card__container">
+            <img
+              class="card__image"
+              src="images/featured/house1.jpeg"
+              alt="house"
+            />
+            <div class="card__cardLabel cardLabel--popular">
+              <svg class="cardLabel--icon" width="22" height="22">
+                <use href="/images/svg/fire.svg#fire"></use>
+              </svg>
+              <p>Popular</p>
+            </div>
+            <div>
+              <h3>Roselands House</h3>
+              <h4 class="card__price">$ 35.000.000</h4>
+            </div>
+            <div class="card__profile">
+              <div class="card__profile--left">
+                <img src="/images/profiles/Dianne.png" alt="" />
+              </div>
+              <div class="card__profile--right">
+                <p class="card__profile__subtitle subtitle">Dianne Russel</p>
+                <p class="card__profile__label">Manchester, Kentucky</p>
+              </div>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card__container">
+            <img
+              class="card__image"
+              src="images/featured/house1.jpeg"
+              alt="house"
+            />
+            <div class="card__cardLabel cardLabel--popular">
+              <svg class="cardLabel--icon" width="22" height="22">
+                <use href="/images/svg/fire.svg#fire"></use>
+              </svg>
+              <p>Popular</p>
+            </div>
+            <div>
+              <h3>Roselands House</h3>
+              <h4 class="card__price">$ 35.000.000</h4>
+            </div>
+            <div class="card__profile">
+              <div class="card__profile--left">
+                <img src="/images/profiles/Dianne.png" alt="" />
+              </div>
+              <div class="card__profile--right">
+                <p class="card__profile__subtitle subtitle">Dianne Russel</p>
+                <p class="card__profile__label">Manchester, Kentucky</p>
+              </div>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="card__container">
+            <img
+              class="card__image"
+              src="images/featured/house1.jpeg"
+              alt="house"
+            />
+            <div class="card__cardLabel cardLabel--popular">
+              <svg class="cardLabel--icon" width="22" height="22">
+                <use href="/images/svg/fire.svg#fire"></use>
+              </svg>
+              <p>Popular</p>
+            </div>
+            <div>
+              <h3>Roselands House</h3>
+              <h4 class="card__price">$ 35.000.000</h4>
+            </div>
+            <div class="card__profile">
+              <div class="card__profile--left">
+                <img src="/images/profiles/Dianne.png" alt="" />
+              </div>
+              <div class="card__profile--right">
+                <p class="card__profile__subtitle subtitle">Dianne Russel</p>
+                <p class="card__profile__label">Manchester, Kentucky</p>
+              </div>
+            </div>
+          </div>
+          <!-- card -->
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

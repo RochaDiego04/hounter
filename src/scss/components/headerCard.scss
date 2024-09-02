@@ -1,0 +1,22 @@
+.headerCard {
+  display: flex;
+  gap: 0.9rem;
+  padding: 2rem 2.5rem;
+  border-radius: 3.2rem;
+  background-color: var(--white);
+
+  &__images {
+  }
+
+  &__information {
+    &--title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 2rem;
+    }
+    &--caption {
+      line-height: 1.5rem;
+      color: var(--grey2);
+    }
+  }
+}

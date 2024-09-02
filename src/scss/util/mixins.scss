@@ -31,3 +31,26 @@
     }
   }
 }
+
+@mixin body-container-width {
+  max-width: 210rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Mixin for profile repetitive section
+@mixin profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.6rem;
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-left: auto;
+  }
+  &__label {
+    font-size: 1.4rem;
+    color: var(--grey2);
+  }
+}

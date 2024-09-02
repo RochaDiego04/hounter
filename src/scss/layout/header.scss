@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 8rem 1fr;
+  margin-bottom: 12rem;
 
   &__information {
     max-width: 50rem;

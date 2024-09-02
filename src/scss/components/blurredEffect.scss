@@ -13,4 +13,12 @@
     @extend .blurred-ball;
     background-color: var(--blue-blur);
   }
+  &--yellow {
+    @extend .blurred-ball;
+    background-color: var(--yellow-blur);
+  }
+  &--orange {
+    @extend .blurred-ball;
+    background-color: var(--orange-blur);
+  }
 }

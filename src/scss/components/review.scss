@@ -1,0 +1,61 @@
+@use "../util/mixins.scss" as m;
+
+.review {
+  text-align: center;
+  &__label {
+    color: var(--secondary);
+  }
+  &__title {
+  }
+
+  &__card {
+    max-width: 78.4rem;
+    border-radius: 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 16.8rem 7.2rem;
+
+    &__image {
+      border-radius: 0.8rem;
+      height: 42.9rem;
+      width: 78.4rem;
+      max-width: 78.4rem;
+      object-fit: cover;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+
+    &__information {
+      border-radius: 1.6rem;
+      margin: 0 8.6rem;
+      padding: 3.2rem;
+      background-color: var(--white);
+      grid-column: 1 / 2;
+      grid-row: 2 / 4;
+      box-shadow: 0 0.8rem 3.2rem 0 #0c153717;
+      text-align: start;
+
+      .card__title {
+        font-weight: 500;
+        margin-bottom: 1.6rem;
+      }
+      .card__description {
+        color: var(--grey3);
+      }
+      .card__profile {
+        @include m.profile;
+
+        &__calificationText {
+          font-weight: 500;
+        }
+        &--right {
+          margin-right: auto;
+        }
+        &--left {
+          display: flex;
+          gap: 1.6rem;
+        }
+      }
+    }
+  }
+}

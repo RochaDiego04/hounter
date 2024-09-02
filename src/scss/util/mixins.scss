@@ -40,8 +40,8 @@
 
 // Mixin for profile repetitive section
 @mixin profile {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  align-items: center;
   gap: 1.6rem;
 
   &__subtitle {

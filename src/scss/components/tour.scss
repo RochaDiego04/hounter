@@ -1,0 +1,118 @@
+@use "../util/variables.scss" as v;
+@use "../util/mixins.scss" as m;
+
+.tour {
+  @include m.body-container-width;
+  padding: 0 v.$global-padding;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+
+    &--left {
+      max-width: 45rem;
+    }
+    &--right {
+      flex: 1;
+      max-width: 53rem;
+    }
+  }
+
+  &__label {
+    margin: 2rem 0 1.2rem 0;
+    color: var(--secondary);
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+  }
+
+  &__caption {
+    margin-bottom: 2.4rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 2.4rem;
+    font-weight: 600;
+  }
+
+  &__houseDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.6rem;
+    padding-bottom: 3.2rem;
+    border-bottom: 2px solid var(--grey1);
+    margin-bottom: 3.2rem;
+    &--detail {
+      font-weight: 500;
+      line-height: 2rem;
+      color: var(--grey3);
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+  }
+
+  &__profile {
+    @include m.profile;
+
+    &__flexContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  // RIGHT SIDE OF SECTION
+  &__imageComposition {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "imageCompo";
+  }
+
+  &__mainImage {
+    max-width: 47.8rem;
+    height: 41.7rem;
+    object-fit: cover;
+    grid-area: imageCompo;
+    border-radius: 0.8rem;
+  }
+  &__midImage {
+    width: 29.6rem;
+    max-width: 29.6rem;
+    height: 16.8rem;
+    align-self: end;
+    object-fit: cover;
+    grid-area: imageCompo;
+    margin-left: -5rem;
+    margin-bottom: -4.3rem;
+    border-radius: 0.8rem;
+  }
+  &__smallImage {
+    grid-area: imageCompo;
+    width: 9.6rem;
+    height: 8rem;
+    border-radius: 0.8rem;
+
+    &--1 {
+      @extend .tour__smallImage;
+      align-self: end;
+      justify-self: end;
+      margin-right: 7rem;
+      margin-bottom: -4.3rem;
+      object-fit: cover;
+    }
+    &--2 {
+      @extend .tour__smallImage;
+      align-self: end;
+      justify-self: end;
+      margin-right: 17.5rem;
+      margin-bottom: -4.3rem;
+      object-fit: cover;
+    }
+  }
+}

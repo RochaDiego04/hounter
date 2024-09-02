@@ -67,6 +67,11 @@ h4 {
   font-weight: 500;
 }
 
+.caption-grey {
+  font-weight: 300;
+  color: var(--grey3);
+}
+
 .label {
   font-weight: 400;
   font-size: 1.4rem;
@@ -94,7 +99,7 @@ h4 {
     width: 3.2rem;
     background-color: var(--secondary);
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: -4rem;
   }
 }

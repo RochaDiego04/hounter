@@ -1,6 +1,8 @@
 @use "../util/variables.scss" as v;
+@use "../util/mixins.scss" as m;
 
 .featured {
+  @include m.body-container-width;
   padding: 0 0 0 v.$global-padding;
   overflow: hidden;
 
@@ -44,6 +46,7 @@
     }
     &__image {
       border-radius: 2.4rem;
+      object-fit: cover;
       min-height: 37rem;
       max-width: 37rem;
       grid-column: 1 / 2;
@@ -64,21 +67,7 @@
     }
 
     &__profile {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1.6rem;
-      &--left {
-      }
-
-      &__subtitle {
-        font-weight: 500;
-        font-size: 1.8rem;
-        margin-left: auto;
-      }
-      &__label {
-        font-size: 1.4rem;
-        color: var(--grey2);
-      }
+      @include m.profile;
     }
   }
 

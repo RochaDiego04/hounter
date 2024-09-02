@@ -5,6 +5,7 @@
   @include m.body-container-width;
   padding: 0 0 0 v.$global-padding;
   overflow: hidden;
+  margin-bottom: 12rem;
 
   &__label {
     color: var(--secondary);

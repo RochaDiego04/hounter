@@ -21,4 +21,8 @@
     @extend .blurred-ball;
     background-color: var(--orange-blur);
   }
+  &--lime {
+    @extend .blurred-ball;
+    background-color: var(--lime-blur);
+  }
 }

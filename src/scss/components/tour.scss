@@ -2,12 +2,23 @@
 @use "../util/mixins.scss" as m;
 
 .tour {
-  @include m.body-container-width;
-  padding: 0 v.$global-padding;
-  margin-bottom: 12rem;
+  position: relative; // For blurred background circles
+  .blurred-ball--yellow {
+    position: absolute;
+    top: -5rem;
+    right: -10rem;
+  }
+  .blurred-ball--orange {
+    position: absolute;
+    top: -20rem;
+    right: 5rem;
+  }
 
   &__container {
     display: flex;
+    @include m.body-container-width;
+    padding: 0 v.$global-padding;
+    margin-bottom: 12rem;
     justify-content: space-between;
     gap: 8rem;
 
@@ -17,18 +28,6 @@
     &--right {
       flex: 1;
       max-width: 53rem;
-      position: relative; // For blurred background circles
-
-      .blurred-ball--yellow {
-        position: absolute;
-        top: -5rem;
-        right: -10rem;
-      }
-      .blurred-ball--orange {
-        position: absolute;
-        top: -10rem;
-        right: -5rem;
-      }
     }
   }
 

@@ -1,0 +1,96 @@
+@use "../util/mixins.scss" as m;
+@use "../util/variables.scss" as v;
+
+.findMore {
+  @include m.body-container-width;
+  padding: 0 v.$global-padding;
+  text-align: center;
+  margin-bottom: 12rem;
+
+  &__title {
+    max-width: 58rem;
+    margin: 0 auto 1.6rem auto;
+  }
+
+  &__button {
+    margin-bottom: 4.8rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    &--left {
+      display: grid;
+      grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+      gap: 3.2rem; // Optional gap between rows
+    }
+  }
+
+  &__leftCard {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    text-align: start;
+
+    &__image {
+      object-fit: cover;
+      border-radius: 1.6rem;
+    }
+  }
+  &__selectedCard {
+    text-align: start;
+    &__image {
+      object-fit: cover;
+      border-radius: 1.6rem;
+    }
+  }
+
+  &__leftCard__image {
+    width: 20rem;
+    max-width: 20rem;
+    height: 14.8rem;
+  }
+
+  &__selectedCard__image {
+    width: 58rem;
+    max-width: 58rem;
+    height: 28rem;
+    max-height: 28rem;
+  }
+
+  &__info {
+    text-align: start;
+    margin-right: auto;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin-bottom: 1.2rem;
+
+      &__label {
+        color: #3c4563;
+      }
+
+      &__content {
+        margin-bottom: 1.2rem;
+        &--selected {
+          margin-bottom: 1.2rem;
+          font-size: 2.4rem;
+        }
+      }
+      &__description {
+        color: #626687;
+      }
+
+      &__date {
+        color: #888b97;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+      }
+    }
+  }
+}

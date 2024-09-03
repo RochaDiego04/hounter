@@ -2,10 +2,9 @@
 
 .review {
   text-align: center;
-  &__label {
-    color: var(--secondary);
-  }
+  margin-bottom: 12rem;
   &__title {
+    margin-bottom: 4rem;
   }
 
   &__card {

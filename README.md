@@ -76,3 +76,11 @@ npm install gulp gulp-sass sass gulp-postcss autoprefixer cssnano gulp-babel @ba
 - @babel/preset-env: A Babel preset to compile ES6+ to ES5.
 - gulp-terser: A Gulp plugin to minify JavaScript.
 - browser-sync: A tool to synchronize browser testing.
+
+## JSON SERVER
+
+Use this npm library to simulate a REST API within a port of our localhost.
+
+### 1. Run the script npm run start
+
+This script will be watching for any updates in our db.json file.

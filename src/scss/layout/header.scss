@@ -74,6 +74,22 @@
       gap: 1.6rem;
 
       padding: 0 0 4.8rem 4.8rem;
+
+      .headerCard {
+        &__images {
+          position: relative;
+          display: flex;
+          width: fit-content;
+          .profileImage {
+            position: relative;
+            z-index: 1;
+            margin-left: -2rem;
+          }
+          .profileImage:first-child {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }

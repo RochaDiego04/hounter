@@ -1,0 +1,27 @@
+{
+  "headerCards": [
+    {
+      "id": 1,
+      "title": "1K People",
+      "description": "Successfully Getting Home",
+      "images": [
+        "/images//profiles/Marianna.png",
+        "/images//profiles/Mark.png",
+        "/images//profiles/Jenny.png"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "1K People",
+      "description": "Successfully Getting Home",
+      "images": ["/images//findMore/house_4.jpeg"]
+    },
+    {
+      "id": 3,
+      "title": "4K+",
+      "description": "People Looking for New Homes",
+      "images": ["/images//profiles/Ariana.png"]
+    }
+  ],
+  "featuredHouses": []
+}

@@ -48,7 +48,9 @@
     &__image {
       border-radius: 2.4rem;
       object-fit: cover;
-      min-height: 37rem;
+      height: 37rem;
+      max-height: 37rem;
+      width: 37rem;
       max-width: 37rem;
       grid-column: 1 / 2;
       grid-row: 1 / 3;

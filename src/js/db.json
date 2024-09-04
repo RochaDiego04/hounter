@@ -23,5 +23,58 @@
       "images": ["/images//profiles/Ariana.png"]
     }
   ],
-  "featuredHouses": []
+  "featuredHouses": [
+    {
+      "id": 1,
+      "label": "Popular",
+      "image": "/images//featured/house1.jpeg",
+      "title": "Roselands House",
+      "price": 35000000,
+      "profile": {
+        "profileImage": "/images//profiles/Dianne.png",
+        "name": "Dianne Russell",
+        "state": "Kentucky",
+        "city": "Manchester"
+      }
+    },
+    {
+      "id": 2,
+      "label": "New house",
+      "image": "/images//featured/house2.jpeg",
+      "title": "Woodlandside",
+      "price": 20000000,
+      "profile": {
+        "profileImage": "/images//profiles/Mark.png",
+        "name": "Robert Fox",
+        "state": "South Dakota",
+        "city": "Dr. San Jose"
+      }
+    },
+    {
+      "id": 3,
+      "label": "Best deals",
+      "image": "/images//featured/house3.jpeg",
+      "title": "The Old Lightouse",
+      "price": 44000000,
+      "profile": {
+        "profileImage": "/images//profiles/Ronald.png",
+        "name": "Ronald Richards",
+        "state": "Illinois",
+        "city": "Santa Ana"
+      }
+    },
+    {
+      "id": 4,
+      "label": "Popular",
+      "image": "/images//featured/house4.jpeg",
+      "title": "Cosmo's House",
+      "price": 22000000,
+      "profile": {
+        "profileImage": "/images//profiles/Jenny.png",
+        "name": "Jenny Wilson",
+        "state": "Maine 98380",
+        "city": "Preston Rd. Inglewood"
+      }
+    }
+  ]
 }

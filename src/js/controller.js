@@ -1,9 +1,6 @@
 import * as model from "./model.js";
 import headerCardsView from "./views/headerCardsView.js";
-
-const headerCardsContainer = document.querySelector(
-  ".header__background-container__cards"
-);
+import featureCardsView from "./views/featureCardsView.js";
 
 const controlHeaderCards = async function () {
   // Loading header cards
@@ -12,4 +9,13 @@ const controlHeaderCards = async function () {
   headerCardsView.render(model.state.headerCards);
 };
 
-window.addEventListener("load", controlHeaderCards);
+const controlFeatureCards = async function () {
+  await model.loadFeatureCards("Houses");
+  featureCardsView.render(model.state.features.featureCards);
+};
+
+const init = function () {
+  headerCardsView.addHandlerRender(controlHeaderCards);
+  featureCardsView.addHandlerRender(controlFeatureCards);
+};
+init();

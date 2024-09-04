@@ -13,6 +13,10 @@
     @extend .blurred-ball;
     background-color: var(--blue-blur);
   }
+  &--darkBlue {
+    @extend .blurred-ball;
+    background-color: var(--darkBlue-blur);
+  }
   &--yellow {
     @extend .blurred-ball;
     background-color: var(--yellow-blur);

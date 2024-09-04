@@ -1,3 +1,6 @@
+import { API_URL } from "./config.js";
+import { getJSON } from "./helpers.js";
+
 export const state = {
   headerCards: [],
 };
@@ -5,9 +8,7 @@ export const state = {
 export const loadHeaderCards = async function () {
   // Loading header card
   try {
-    const res = await fetch("http://localhost:5000/headerCards");
-    const data = await res.json();
-    console.log(res, data);
+    const data = await getJSON(`${API_URL}/headerCards`);
 
     data.forEach((headerCard) => {
       const card = {

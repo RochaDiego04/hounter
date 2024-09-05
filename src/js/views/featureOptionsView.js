@@ -13,7 +13,7 @@ class FeatureOptionsView {
         if (!btn) return;
 
         this.#query = btn.dataset.type; // featuredHouses, featuredVillas, featuredApartments
-        console.log(this.#query);
+        handler(this.#query);
       }.bind(this) // this binded to the class, not event listener
     );
   }

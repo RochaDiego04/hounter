@@ -31,6 +31,7 @@ export const loadHeaderCards = async function () {
 export const loadFeatureCards = async function (query) {
   try {
     state.features.query = query;
+    state.features.featureCards = [];
 
     const data = await getJSON(`${API_URL}/featured${query}`);
 
@@ -51,6 +52,6 @@ export const loadFeatureCards = async function (query) {
       state.features.featureCards.push(card);
     });
   } catch (err) {
-    alert(err);
+    console.log(err);
   }
 };

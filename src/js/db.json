@@ -76,5 +76,35 @@
         "city": "Preston Rd. Inglewood"
       }
     }
+  ],
+  "featuredApartments": [
+    {
+      "id": 4,
+      "label": "Popular",
+      "image": "/images//featured/house4.jpeg",
+      "title": "Cosmo's House",
+      "price": 22000000,
+      "profile": {
+        "profileImage": "/images//profiles/Jenny.png",
+        "name": "Jenny Wilson",
+        "state": "Maine 98380",
+        "city": "Preston Rd. Inglewood"
+      }
+    }
+  ],
+  "featuredVillas": [
+    {
+      "id": 1,
+      "label": "Popular",
+      "image": "/images//featured/house1.jpeg",
+      "title": "Roselands House",
+      "price": 35000000,
+      "profile": {
+        "profileImage": "/images//profiles/Dianne.png",
+        "name": "Dianne Russell",
+        "state": "Kentucky",
+        "city": "Manchester"
+      }
+    }
   ]
 }

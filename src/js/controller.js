@@ -10,8 +10,8 @@ const controlHeaderCards = async function () {
   headerCardsView.render(model.state.headerCards);
 };
 
-const controlFeatureCards = async function () {
-  await model.loadFeatureCards("Houses");
+const controlFeatureCards = async function (query = "Houses") {
+  await model.loadFeatureCards(query);
   featureCardsView.render(model.state.features.featureCards);
 };
 

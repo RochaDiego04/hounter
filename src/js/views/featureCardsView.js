@@ -16,8 +16,9 @@ class FeatureCardsView {
   }
 
   addHandlerRender(handler) {
-    // call function from the controller
-    window.addEventListener("load", handler);
+    window.addEventListener("load", function () {
+      handler("Houses");
+    });
   }
 
   #generateMarkup() {

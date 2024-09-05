@@ -4,6 +4,7 @@ const formatter = new Intl.NumberFormat("en-US", {
 });
 
 export const getJSON = async function (url) {
+  console.log(url);
   try {
     const res = await fetch(url);
     const data = await res.json();

@@ -17,7 +17,7 @@ class FeatureCardsView {
 
   addHandlerRender(handler) {
     window.addEventListener("load", function () {
-      handler("Houses");
+      handler("Houses"); // default initial render
     });
   }
 

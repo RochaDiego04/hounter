@@ -9,10 +9,19 @@ class FeatureOptionsView {
       "click",
       function (e) {
         e.preventDefault();
-        const btn = e.target.closest(".button");
-        if (!btn) return;
+        const btnSelected = e.target.closest(".button");
+        if (!btnSelected) return;
 
-        this.#query = btn.dataset.type; // featuredHouses, featuredVillas, featuredApartments
+        this.#parentElement
+          .querySelectorAll(".button")
+          .forEach(function (button) {
+            button.classList.remove("button--light-green");
+            button.classList.add("button--bordered");
+          });
+        btnSelected.classList.add("button--light-green");
+        btnSelected.classList.remove("button--bordered");
+
+        this.#query = btnSelected.dataset.type; // featuredHouses, featuredVillas, featuredApartments
         handler(this.#query);
       }.bind(this) // this binded to the class, not event listener
     );

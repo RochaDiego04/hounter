@@ -1,6 +1,7 @@
 class ReviewCardsView {
   #data;
   #parentElement = document.querySelector(".dot-slider");
+  #dotsContainer = document.querySelector(".dots");
 
   render(data) {
     this.#data = data;
@@ -54,9 +55,25 @@ class ReviewCardsView {
                 </div>
               </div>
             </div>
-          </div>`;
+          </div>
+          `;
     });
+
+    // adding dots after the cards
+    const dots = this.#createDots(reviewCards.length);
+    markup.push(dots);
+
     return markup.join("");
+  }
+
+  #createDots(cardsLength) {
+    const dotsMarkup = [];
+    dotsMarkup.push('<div class="dots">');
+    for (let i = 1; i <= cardsLength; i++) {
+      dotsMarkup.push(`<button class="dots--dot"  data-slide="${i}"></button>`);
+    }
+    dotsMarkup.push("</div>");
+    return dotsMarkup.join("");
   }
 }
 

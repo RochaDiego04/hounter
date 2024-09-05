@@ -1,4 +1,10 @@
+const formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
+
 export const getJSON = async function (url) {
+  console.log(url);
   try {
     const res = await fetch(url);
     const data = await res.json();
@@ -6,4 +12,8 @@ export const getJSON = async function (url) {
   } catch (err) {
     console.log(err);
   }
+};
+
+export const formatPrice = function (priceNumber) {
+  return formatter.format(priceNumber);
 };

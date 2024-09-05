@@ -15,6 +15,11 @@ class HeaderCardsView {
     this.#parentElement.innerHTML = "";
   }
 
+  addHandlerRender(handler) {
+    // call function from the controller
+    window.addEventListener("load", handler);
+  }
+
   #generateMarkup() {
     const [...headerCards] = this.#data;
     const markup = headerCards.map(function (card) {

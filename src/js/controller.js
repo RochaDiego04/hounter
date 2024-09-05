@@ -1,6 +1,7 @@
 import * as model from "./model.js";
 import headerCardsView from "./views/headerCardsView.js";
 import featureCardsView from "./views/featureCardsView.js";
+import featureOptionsView from "./views/featureOptionsView.js";
 
 const controlHeaderCards = async function () {
   // Loading header cards
@@ -17,5 +18,6 @@ const controlFeatureCards = async function () {
 const init = function () {
   headerCardsView.addHandlerRender(controlHeaderCards);
   featureCardsView.addHandlerRender(controlFeatureCards);
+  featureOptionsView.addHandlerClick(controlFeatureCards);
 };
 init();

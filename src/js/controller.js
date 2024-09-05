@@ -2,6 +2,7 @@ import * as model from "./model.js";
 import headerCardsView from "./views/headerCardsView.js";
 import featureCardsView from "./views/featureCardsView.js";
 import featureOptionsView from "./views/featureOptionsView.js";
+import reviewCardsView from "./views/reviewCardsView.js";
 
 const controlHeaderCards = async function () {
   // Loading header cards
@@ -15,9 +16,15 @@ const controlFeatureCards = async function (query = "Houses") {
   featureCardsView.render(model.state.features.featureCards);
 };
 
+const controlReviewCards = async function () {
+  await model.loadReviewCards();
+  reviewCardsView.render(model.state.reviewCards);
+};
+
 const init = function () {
   headerCardsView.addHandlerRender(controlHeaderCards);
   featureCardsView.addHandlerRender(controlFeatureCards);
   featureOptionsView.addHandlerClick(controlFeatureCards);
+  reviewCardsView.addHandlerRender(controlReviewCards);
 };
 init();

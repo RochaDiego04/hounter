@@ -7,6 +7,7 @@ export const state = {
     query: "",
     featureCards: [],
   },
+  reviewCards: [],
 };
 
 export const loadHeaderCards = async function () {
@@ -50,6 +51,31 @@ export const loadFeatureCards = async function (query) {
         },
       };
       state.features.featureCards.push(card);
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const loadReviewCards = async function () {
+  try {
+    const data = await getJSON(`${API_URL}/reviewCards`);
+
+    console.log(data);
+    data.forEach((reviewCard) => {
+      const card = {
+        id: reviewCard.id,
+        title: reviewCard.title,
+        description: reviewCard.description,
+        image: reviewCard.image,
+        profile: {
+          profileImage: reviewCard.profile.profileImage,
+          name: reviewCard.profile.name,
+          profession: reviewCard.profile.profession,
+          stars: reviewCard.profile.stars,
+        },
+      };
+      state.reviewCards.push(card);
     });
   } catch (err) {
     console.log(err);

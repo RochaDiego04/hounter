@@ -1,0 +1,39 @@
+.dot-slider {
+  height: 60rem;
+  position: relative;
+
+  .review__card {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    transition: transform 1s;
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+
+    &--dot {
+      border: none;
+      background-color: #ff0000;
+      opacity: 0.7;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      margin-right: 1.75rem;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+    &--dot:last-child {
+      margin: 0;
+    }
+    .dot--active {
+      background-color: #888;
+      opacity: 1;
+    }
+  }
+}

@@ -40,6 +40,16 @@ class FeatureArrowsView {
       const btnArrowSelected = e.target.closest(".arrow-btn");
       if (!btnArrowSelected) return;
 
+      // change arrow button styles
+      this.#parentElement
+        .querySelectorAll(".arrow-btn")
+        .forEach(function (button) {
+          button.classList.add("button--green-rounded");
+          button.classList.remove("button--bordered-rounded");
+        });
+      btnArrowSelected.classList.add("button--bordered-rounded");
+      btnArrowSelected.classList.remove("button--green-rounded");
+
       const direction = btnArrowSelected.dataset.direction;
 
       if (direction === "right" && this.#currentPosition < this.#maxPosition) {

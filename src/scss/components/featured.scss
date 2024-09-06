@@ -41,7 +41,8 @@
 
   .card {
     &__container {
-      max-width: 40rem;
+      width: 40%;
+      min-width: 40%;
       display: grid;
       grid-template-rows: repeat(6, auto);
       grid-auto-rows: auto;
@@ -53,9 +54,8 @@
       border-radius: 2.4rem;
       object-fit: cover;
       height: 37rem;
-      max-height: 37rem;
-      width: 37rem;
-      max-width: 37rem;
+      width: 100%;
+      max-width: 100%;
       grid-column: 1 / 2;
       grid-row: 1 / 3;
     }

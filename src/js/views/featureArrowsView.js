@@ -15,9 +15,12 @@ class FeatureArrowsView {
     const firstCard = this.#cardsContainer.querySelector(".card__container");
     if (!firstCard) return;
 
-    this.#cardWidth = firstCard.offsetWidth;
+    const gap = parseFloat(getComputedStyle(this.#cardsContainer).gap);
+
+    this.#cardWidth = firstCard.offsetWidth + gap;
+
     this.#visibleCards = Math.floor(
-      this.#cardsContainer.offsetWidth / this.#cardWidth
+      (this.#cardsContainer.offsetWidth + gap) / this.#cardWidth
     );
     const totalCards = this.#cardsContainer.children.length;
     this.#maxPosition = totalCards - this.#visibleCards;

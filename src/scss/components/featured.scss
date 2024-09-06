@@ -35,6 +35,8 @@
     margin-top: 3.6rem;
     display: flex;
     gap: 3.2rem;
+    display: relative;
+    //transform: translateX(-40rem);
   }
 
   .card {
@@ -44,6 +46,8 @@
       grid-template-rows: repeat(6, auto);
       grid-auto-rows: auto;
       gap: 2.4rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease forwards;
     }
     &__image {
       border-radius: 2.4rem;

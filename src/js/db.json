@@ -95,7 +95,7 @@
   "featuredVillas": [
     {
       "id": 1,
-      "label": "Popular",
+      "label": "Best deals",
       "image": "/images//featured/house1.jpeg",
       "title": "Roselands House",
       "price": 35000000,

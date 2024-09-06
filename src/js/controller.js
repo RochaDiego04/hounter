@@ -2,6 +2,7 @@ import * as model from "./model.js";
 import headerCardsView from "./views/headerCardsView.js";
 import featureCardsView from "./views/featureCardsView.js";
 import featureOptionsView from "./views/featureOptionsView.js";
+import featureArrowsView from "./views/featureArrowsView.js";
 import reviewCardsView from "./views/reviewCardsView.js";
 
 const controlHeaderCards = async function () {
@@ -14,6 +15,9 @@ const controlHeaderCards = async function () {
 const controlFeatureCards = async function (query = "Houses") {
   await model.loadFeatureCards(query);
   featureCardsView.render(model.state.features.featureCards);
+
+  featureArrowsView.setCardWidthAndPositions();
+  featureArrowsView.addHandlerClick();
 };
 
 const controlReviewCards = async function () {

@@ -16,7 +16,6 @@ const controlFeatureCards = async function (query = "Houses") {
   await model.loadFeatureCards(query);
   featureCardsView.render(model.state.features.featureCards);
 
-  // Initialize arrows with updated card/container dimensions
   featureArrowsView.setCardWidthAndPositions();
   featureArrowsView.addHandlerClick();
 };

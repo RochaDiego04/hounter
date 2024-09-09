@@ -43,9 +43,23 @@
                 </a>
               </li>
               <li>
-                <a class="button button--white label label--bold" href="#">
-                  Property
-                </a>
+                <div class="dropdown-container">
+                  <button
+                    class="dropdown dropdown--white label label--bold"
+                    href="#"
+                  >
+                    Property
+                    <svg class="dropdown__arrowIcon" width="24" height="24">
+                      <use href="/images/svg/arrow.svg#arrow"></use>
+                    </svg>
+                  </button>
+                  <ul class="dropdown__menu">
+                    <li class="dropdown__item">HTML</li>
+                    <li class="dropdown__item">CSS</li>
+                    <li class="dropdown__item">JavaScript</li>
+                    <li class="dropdown__item">React</li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <a
@@ -562,22 +576,36 @@
               <div class="inputGroup">
                 <label for="name">Name</label>
                 <div class="inputGroup--left">
-                  <input type="email" id="name" placeholder="Your name" />
+                  <input type="text" id="name" placeholder="Your name" />
                   <div class="error-message">Field error. Please fix it</div>
                 </div>
               </div>
               <div class="inputGroup">
                 <label for="surname">Surname</label>
                 <div class="inputGroup--left">
-                  <input type="email" id="surname" placeholder="Your name" />
+                  <input type="text" id="surname" placeholder="Your surname" />
                   <div class="error-message">Field error. Please fix it</div>
                 </div>
               </div>
               <div class="inputGroup">
-                <label for="surname">Surname</label>
-                <div class="inputGroup--left">
-                  <input type="email" id="surname" placeholder="Your name" />
-                  <div class="error-message">Field error. Please fix it</div>
+                <label for="education">Education</label>
+                <div class="dropdown-container-input">
+                  <button
+                    class="dropdown dropdown--bordered label"
+                    href="#"
+                    type="button"
+                  >
+                    Property
+                    <svg class="dropdown__arrowIcon" width="24" height="24">
+                      <use href="/images/svg/arrow.svg#arrow"></use>
+                    </svg>
+                  </button>
+                  <ul class="dropdown__menu">
+                    <li class="dropdown__item">HTML</li>
+                    <li class="dropdown__item">CSS</li>
+                    <li class="dropdown__item">JavaScript</li>
+                    <li class="dropdown__item">React</li>
+                  </ul>
                 </div>
               </div>
               <div class="inputGroup">

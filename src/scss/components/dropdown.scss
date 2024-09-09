@@ -1,0 +1,120 @@
+$dropdown-height-normal: 4.5rem;
+$dropdown-height-small: 3.4rem;
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-container-input {
+  position: relative;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 10;
+
+  &,
+  &:link,
+  &:visited {
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 10rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &--white {
+    @extend .dropdown;
+    height: $dropdown-height-small;
+    padding: 0.8px 1.6rem;
+    border: 1px solid var(--white) !important;
+    color: var(--white);
+    background-color: var(--transparent-white);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+    + .dropdown__menu {
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 1px solid var(--white);
+      .dropdown__item {
+        color: white;
+        &:hover {
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+
+  &--bordered {
+    @extend .dropdown;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: $dropdown-height-normal;
+    padding: 0.8px 1.6rem;
+    border: 1px solid var(--grey1) !important;
+    color: var(--grey2);
+    background-color: var(--white);
+
+    &:hover {
+      background-color: rgb(240, 240, 240);
+    }
+    + .dropdown__menu {
+      background-color: rgb(255, 255, 255);
+      border: 1px solid var(--grey1);
+      .dropdown__item {
+        color: var(--black);
+        &:hover {
+          background-color: var(--transparent-primary);
+        }
+      }
+    }
+  }
+
+  &__arrowIcon {
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+
+  &:focus &__arrowIcon {
+    transform: rotate(270deg);
+  }
+
+  &:focus + .dropdown__menu {
+    display: block;
+  }
+}
+
+.dropdown__menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+  margin-top: -3.4rem;
+  border-radius: 1.6rem;
+  z-index: 1;
+  padding: 4rem 0.5rem 1rem 0.5rem;
+  overflow: hidden;
+}
+
+.dropdown__item {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.4rem 1.2rem;
+  border-radius: 2.8rem;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

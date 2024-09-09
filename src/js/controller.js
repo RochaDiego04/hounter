@@ -45,7 +45,7 @@ const controlFindMoreCards = async function () {
     await model.loadFindMoreCards();
 
     if (!model.state.findMore.selectedCard) {
-      model.updateSelectedCard(1);
+      model.updateSelectedCard(4);
     }
 
     findMoreCardsView.render(model.state.findMore.findMoreCards);

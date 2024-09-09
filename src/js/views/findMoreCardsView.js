@@ -34,7 +34,6 @@ class FindMoreCardsView {
   }
 
   #generateCardMarkup(card) {
-    console.log(card);
     return `
       <div class="findMore__leftCard" data-id="${card.id}">
         <img class="findMore__leftCard__image" src="${card.image}" alt="" />

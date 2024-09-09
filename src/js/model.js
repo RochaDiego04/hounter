@@ -105,6 +105,7 @@ export const loadFindMoreCards = async function () {
           date: findMoreCard.date.date,
         },
       };
+      console.log(card);
       state.findMore.findMoreCards.push(card);
     });
   } catch (err) {
@@ -112,7 +113,10 @@ export const loadFindMoreCards = async function () {
   }
 };
 
-export const updateSelectedCard = function (id = 1) {
-  const selected = state.findMore.findMoreCards.find((card) => card.id === id);
+export const updateSelectedCard = function (id) {
+  const selected = state.findMore.findMoreCards.find((card) => {
+    return +card.id === id;
+  });
+  console.log("selected" + selected);
   state.findMore.selectedCard = selected;
 };

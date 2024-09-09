@@ -23,18 +23,22 @@ class FeatureCardsView {
 
   #generateMarkup() {
     const [...featuredCards] = this.#data;
-    const markup = featuredCards.map(function (card) {
-      const formattedPrice = formatPrice(card.price);
-      return `            
+
+    const markup = featuredCards.map(
+      function (card) {
+        const formattedPrice = formatPrice(card.price);
+        const [labelStyle, icon] = this.#getLabelStyle(card.label);
+
+        return `            
           <div class="card__container">
             <img
               class="card__image"
               src="${card.image}"
               alt=""
             />
-            <div class="card__cardLabel cardLabel--popular">
+            <div class="card__cardLabel cardLabel--${labelStyle}">
               <svg class="cardLabel--icon" width="22" height="22">
-                <use href="/images/svg/fire.svg#fire"></use>
+                <use href="/images/svg/${icon}.svg#${icon}"></use>
               </svg>
               <p>${card.label}</p>
             </div>
@@ -56,8 +60,20 @@ class FeatureCardsView {
               </div>
             </div>
           </div>`;
-    });
+      }.bind(this)
+    ); // binding "this" keyword to the class instance and not the function inside map
     return markup.join("");
+  }
+
+  #getLabelStyle(txtLabel) {
+    switch (txtLabel) {
+      case "Popular":
+        return ["popular", "fire"];
+      case "New house":
+        return ["new", "house"];
+      case "Best deals":
+        return ["deals", "wallet"];
+    }
   }
 }
 

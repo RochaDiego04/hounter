@@ -2,6 +2,7 @@ $button-height-normal: 4.5rem;
 $button-height-small: 3.4rem;
 
 .button {
+  transition: border-color 0.5s ease, background-color 0.7s ease;
   color: var(--white);
 
   &,

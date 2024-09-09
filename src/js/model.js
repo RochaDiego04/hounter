@@ -8,6 +8,10 @@ export const state = {
     featureCards: [],
   },
   reviewCards: [],
+  findMore: {
+    findMoreCards: [],
+    selectedCard: null,
+  },
 };
 
 export const loadHeaderCards = async function () {
@@ -25,7 +29,7 @@ export const loadHeaderCards = async function () {
       state.headerCards.push(card);
     });
   } catch (err) {
-    alert(err);
+    throw new Error("Failed to load header cards");
   }
 };
 
@@ -53,7 +57,7 @@ export const loadFeatureCards = async function (query) {
       state.features.featureCards.push(card);
     });
   } catch (err) {
-    console.log(err);
+    throw new Error("Failed to load feature cards");
   }
 };
 
@@ -78,6 +82,37 @@ export const loadReviewCards = async function () {
       state.reviewCards.push(card);
     });
   } catch (err) {
-    console.log(err);
+    throw new Error("Failed to load review cards");
   }
+};
+
+export const loadFindMoreCards = async function () {
+  try {
+    const data = await getJSON(`${API_URL}/findMoreCards`);
+
+    data.forEach((findMoreCard) => {
+      const card = {
+        id: findMoreCard.id,
+        title: findMoreCard.title,
+        description: findMoreCard.description,
+        image: findMoreCard.image,
+        profile: {
+          profileImage: findMoreCard.profile.profileImage,
+          name: findMoreCard.profile.name,
+        },
+        date: {
+          timeAgo: findMoreCard.date.timeAgo,
+          date: findMoreCard.date.date,
+        },
+      };
+      state.findMore.findMoreCards.push(card);
+    });
+  } catch (err) {
+    throw new Error("Failed to load find more cards");
+  }
+};
+
+export const updateSelectedCard = function (id = 1) {
+  const selected = state.findMore.findMoreCards.find((card) => card.id === id);
+  state.findMore.selectedCard = selected;
 };

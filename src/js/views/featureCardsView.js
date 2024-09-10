@@ -27,7 +27,7 @@ class FeatureCardsView {
     const markup = featuredCards.map(
       function (card) {
         const formattedPrice = formatPrice(card.price);
-        const [labelStyle, icon] = this.#getLabelStyle(card.label);
+        const [labelStyle, icon, color] = this.#getLabelStyle(card.label);
 
         return `            
           <div class="card__container">
@@ -37,7 +37,7 @@ class FeatureCardsView {
               alt=""
             />
             <div class="card__cardLabel cardLabel--${labelStyle}">
-              <svg class="cardLabel--icon" width="22" height="22">
+              <svg class="cardLabel--icon" width="22" height="22"                 fill="${color}">
                 <use href="/images/svg/${icon}.svg#${icon}"></use>
               </svg>
               <p>${card.label}</p>
@@ -68,11 +68,11 @@ class FeatureCardsView {
   #getLabelStyle(txtLabel) {
     switch (txtLabel) {
       case "Popular":
-        return ["popular", "fire"];
+        return ["popular", "fire", "#EF4444"];
       case "New house":
-        return ["new", "house"];
+        return ["new", "house", "#1D4ED8"];
       case "Best deals":
-        return ["deals", "wallet"];
+        return ["deals", "wallet", "#0B9567"];
     }
   }
 }
